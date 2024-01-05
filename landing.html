@@ -38,6 +38,7 @@
           height: 30px;
           margin-top: 20px;
           border-radius: 30px;
+          box-shadow: 2px 4px 5px black;
          
             
         }
@@ -61,6 +62,16 @@
             
         }
 
+
+        @media screen and (max-width: 730px){
+            .ul-li{
+                display: block;
+            }
+            #itens{
+                display: none;
+            }
+        }
+
         
         
     </style>
@@ -72,13 +83,14 @@
     <header>
         <menu>
             <h1>aqui começa, sua jornada</h1>
+            <input type="button" value="abrir" onclick="openMenu()">
             <a href="#"><img src="facebook (1).png" alt="incone face" class="icon"></a>
 
             <a href="#"><img src="whatsapp (1).png" alt="incone whts" class="icon"></a>
     
             <a href="#"><img src="instagram (1).png" alt="incone insta" class="icon"></a>
           
-            <ul id="intens">
+            <ul id="itens">
                 <li class="ul-li"><a href="#">faq</a></li>
                 <li class="ul-li"><a href="#">sobre</a></li>
                 <li class="ul-li"><a href="#">contatto</a></li>
@@ -97,6 +109,19 @@
 
 
     </div>
+    <script>
+     function openMenu(){
+        var abrir = window.document.getElementById('itens')
+       if( abrir.style.display == 'block'){
+        abrir.style.display = 'none'
+        
+       }else{
+        abrir.style.display = 'block'
+       }
+      
+
+        }
+    </script>
     
 </body>
 </html>
