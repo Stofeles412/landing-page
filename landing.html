@@ -152,6 +152,7 @@
         var abrir = window.document.getElementById('itens')
         var icon = window.document.getElementById('icone-menu')
         var redes = window.document.getElementsByClassName('icon')
+      
        if( abrir.style.display == 'block'){
         abrir.style.display = 'none'
         icon.src = 'menu.png'
@@ -160,12 +161,16 @@
        }else{
         abrir.style.display = 'block'
         icon.src = 'menu-fechado.png.png'
+        
        
         
        }
       
 
         }
+        var nome = window.prompt('qual é seu nome ?')
+        window.alert  (` seja bem vindo (a) ${nome}`)
+        
       
     </script>
   
