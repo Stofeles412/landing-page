@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculos</title>
+</head>
+<body>
+    <main>
+    <p>numero:<input type="number" id="numero-1"></p>
+    <p>numero: 2<input type="number" id="numero-2"></p>
+    <p><input type="button" value="calcular" onclick="calculoNumero()"></p>
+    <div id="res">
+
+    </div>
+    </main>
+    
+</body>
+<script>
+    function calculoNumero(){
+        var n1 = Number(window.document.getElementById ('numero-1'))
+        var n2 = Number(window.document.getElementById ('numero-2'))
+        var soma = (window.document.getElementById ('res'))
+        soma = n1 + n2
+         document.write (`a resposta é ${n1} + ${n2} = ${soma}`)
+     
+    }
+</script>
+</html>
