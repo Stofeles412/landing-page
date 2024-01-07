@@ -72,6 +72,9 @@
         #icone-menu{
             display: none;
         }
+        #itens{
+            text-transform: uppercase;
+        }
 
 
         @media screen and (max-width: 730px){
@@ -80,17 +83,16 @@
             }
             #itens{
                 display: none;
+                text-transform: uppercase;
             }
             #icone-menu{
-                width: 30px;
+                width: 25px;
                 display: block;
-               
+                cursor: pointer;
+                
+                
             }
-            table{
-              
-                width: 100px;
-                height: 20px;
-               
+          
             }
                th, td{
                 border: solid 1px black;
@@ -104,7 +106,8 @@
             margin-left: 100px;
            
             }
-        }
+        
+    
         
 
         
@@ -131,9 +134,9 @@
         </menu>
     </header>
     <main>
-        <p><input type="email" minlength="5" maxlength="10" required placeholder="Email..." class="caixa"></p><br>
-        <p><input type="password" minlength=" 5" maxlength="10" placeholder="senha..." class="caixa"></p> <br>
-        <p><input type="button" value="entrar" class="caixa"></p>
+        <p><input type="email" minlength="5" maxlength="10" required placeholder="Email..." class="caixa" id="box1"></p><br>
+        <p><input type="password" minlength=" 5" maxlength="10" placeholder="senha..." class="caixa" id="box2"></p> <br>
+        <p><input type="submit" value="entrar"></p>
         
     </main>
     <div id="img-2">
@@ -168,10 +171,7 @@
       
 
         }
-        var nome = window.prompt('qual é seu nome ?')
-        window.alert  (` seja bem vindo (a) ${nome}`)
-        document.write (`olá ${nome} seu nome tem ${nome.length} letras`)
-        
+      
       
     </script>
   
