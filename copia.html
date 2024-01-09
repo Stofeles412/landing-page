@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, menu{
+            background-color: #ffdd00;
+            text-align: center;
+        }
+        menu, a{
+            color: black;
+            font-size: 1.2em;
+            font-weight: bold;
+            list-style-type: none;
+            text-decoration: none;
+        }
+         a:hover{
+          
+        }
+
+
+        .lista{
+         margin: 10px;
+           border: solid 1px rgba(0, 0, 0, 0.061);
+           list-style-type: none;
+        }
+        #botao{ background-color: #1fb40b;
+            color: white;
+            height: 40px;
+            border-radius: 3px;
+            font-weight: bold;
+            padding: 10px;
+            margin-left: 150px;
+            border: 0px;
+          
+           
+
+        }
+        #botao-2{
+            background-color: black ;
+            color: white;
+            height: 50px;
+            border-radius: 10px;
+            font-weight: bold;
+            padding: 15px;
+            display: none;
+
+           
+        }
+        #botao-menu, button {
+            width: 25px;
+            border: 0px ;
+            background-color: transparent;
+           
+           
+        }
+        #itens{
+            display: none;
+        }
+
+
+        @media screen and (min-width: 900px){
+            #itens{
+                display: flex;
+                font-size: .9em;
+               
+            }
+            #botao-menu{
+                display: none;
+            }
+            a:hover{
+                background-color: black;
+                color:  #ffdd00;
+                border-radius: 20px;
+                padding: 5px;
+            }
+            #botao:hover{
+                background-color: black;
+                color:  #ffdd00;
+
+            }
+            #botao-2{
+                display: block;
+                color: #ffdd00;
+               
+            }
+            #botao-2:hover{
+                background-color: rgba(0, 0, 0, 0.775);
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copia de um site</title>
+</head>
+<body>
+    <header>
+        <menu>
+            <input type="button" value="inscreva-se" id="botao" >
+          <button>
+              
+                    <img src="menu.png" alt="icon-menu"  id="botao-menu" onclick="openMenu()">
+              
+          </button>
+          <h2>uniasselvi</h2>
+
+            <ul id="itens">
+                <li class="lista"><a href="#">graduação</a></li>
+                <li class="lista"><a href="#">pós-graduação</a></li>
+                <li class="lista"><a href="#">profissionalizantes e técnicos</a></li>
+                <li class="lista"><a href="#">institucional</a></li>
+                <li class="lista"><a href="#">publicações legais</a></li>
+                <li class="lista"><a href="#">blog</a></li>
+                <li class="lista"><a href="#">ambiente virtual</a></li>
+            </ul>
+            <input type="button" value="ambiente virtual" id="botao-2">
+        </menu>
+    </header>
+    <script>
+        function openMenu(){
+            var menu = window.document.getElementById('itens')
+           if ( menu.style.display == 'none'){
+            menu.style.display = 'block'
+           }else{
+            menu.style.display = 'none'
+           }
+        }
+    </script>
+    
+</body>
+</html>
