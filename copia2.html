@@ -1,11 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <style>
+        *{ font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #menu-nav{
+            text-align: center;
+            font-weight: bold;
+            background-color: rgb(90, 87, 87);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.514);
+          
+        }
+        a, li{
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 1.4em;
+            color: aliceblue;
+        }
+        a:hover{
+            background-color: rgb(80, 77, 77);
+            color: black;
+        }
+        ul, li{
+            list-style-type: none;
+        }
+        #itens{
+            display: flex;
+            padding: 5px;
+            gap: 1.5em;
+        }
+        #conteudo{
+            padding: 20px;
+            border: solid 2px rgba(0, 0, 0, 0.198);
+            background-color: rgb(173, 173, 173);
+        }
+        #conteudo,p{
+            padding: 10px;
+        }
+         h1,h2{
+            font-size: 3em;
+           
+          
+        }
+        #menu-icon{
+            display: none;
+        }
+        .imagens{
+          width: 70%;
+          cursor: pointer;
+        }
+        .imagens:hover{
+            width: 90%;
+            border: solid 2px black;
+            box-shadow: 5px 5px 5px black;
+        }
+        div{
+            background-color: rgb(233, 232, 232);
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 730px){
+        #itens{
+            display: none;
+        }
+        #menu-icon{
+            width: 30px;
+            display: block;
+            border: 0;
+            background-color: transparent;
+        }
+        #conteudo{
+            margin-top: 50px;
+            background-color: rgb(167, 165, 165);
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            border: solid 2px rgba(0, 0, 0, 0.409);
+
+        }
+        button{
+            border: 0;
+            background-color: transparent;
+        }
+        button:hover{
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+        li, ul{
+            border: solid 1px rgba(0, 0, 0, 0.11);
+        }
+        .imagens:hover{
+            
+        }
+        }
+            
+        
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <nav id="menu-nav">
+        <h1>menu</h1>
+        <button>
+            <img src="menu.png" alt="menu" id="menu-icon" onclick="openMenu()">
+        </button>
+        <ul id="itens">
+            <li><a href="#">sobre</a></li>
+            <li><a href="#">contato</a></li>
+            <li><a href="#">mais</a></li>
+        </ul>
+    </nav>
+
+    <main id="conteudo">
+        <h1>conteudo...</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A totam vero magni laboriosam cupiditate, repudiandae ad voluptatibus earum nam sed labore ipsum expedita omnis dolore maiores nostrum. Neque, reiciendis nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, amet? Dolor assumenda consequuntur beatae sunt, at ratione error culpa tenetur dolores nihil quas maiores aliquam odit eveniet harum, necessitatibus fugit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A totam vero magni laboriosam cupiditate, repudiandae ad voluptatibus earum nam sed labore ipsum expedita omnis dolore maiores nostrum. Neque, reiciendis nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, amet? Dolor assumenda consequuntur beatae sunt, at ratione error culpa tenetur dolores nihil quas maiores aliquam odit eveniet harum, necessitatibus fugit.</p>
+
+        <h2>jogos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam harum praesentium, tempora facilis quae deserunt doloremque cumque ab quidem, a saepe? Est, delectus? Minima commodi aperiam aspernatur magnam similique reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus molestiae iste quia ad commodi, quibusdam vel labore voluptate sapiente ratione explicabo odit facere incidunt repellendus autem atque similique culpa?
+        </p>
+
+        <img src="nier walpepers.jpeg" alt="nier-game" class="imagens">
+
+
+    </main>
+    <div>
+        <h2>mais conteudos</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid delectus accusamus neque sequi quas? Laudantium illum nemo est deleniti dignissimos nesciunt magni autem! Maiores autem, aspernatur sequi corporis dolore nam!</p>
+    </div>
+
+    <footer>
+        <li>criado por <a href="#">fernando stofeles</a></li>
+    </footer>
+    <script>
+        function openMenu(){
+            var abrir = window.document.getElementById ('itens')
+            var icone = window.document.getElementById ('menu-icon')
+            if (abrir.style.display == "block"){
+                abrir.style.display = 'none'
+                icone.src = 'menu.png'
+               
+            }else{
+                abrir.style.display = 'block'
+                icone.src = 'menu-fechado.png.png'
+              
+            }
+        }
+        var nome = window.prompt ('qual é seu nome ?')
+        window.alert (`seja bem vindo ${nome}`)
+        
+    
+
+    </script>
     
 </body>
 </html>
