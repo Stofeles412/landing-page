@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(141, 141, 142));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            background-color: rgba(0, 0, 0, 0.52);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.517);
+            font-weight: bold;
+        }
+        input{
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+        h1{
+            color: azure;
+            text-transform: uppercase;
+          
+        }
+        #botao-entrar{
+           
+            background-color: rgb(96, 155, 223);
+            border: none;
+            cursor: pointer;
+          
+        }
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela login</title>
+</head>
+<body>
+    <div>
+        <h1>login</h1>
+        <input type="text" placeholder="nome:" required maxlength="6" id="botao-text"> <br><br>
+
+        <input type="password" placeholder="senha:" required maxlength="6" id="botao-senha"> <br><br>
+
+        <input type="submit" value="entar" id="botao-entrar" onclick="enviar()">
+    </div>
+    <script>
+        function enviar(){
+            var botao = window.document.getElementById('botao-text')
+            var botao2 = window.document.getElementById('botao-senha')
+            var botaoenv = window.document.getElementById('botao-entrar')
+            botao.window.alert ('seus dados foram enviados')
+        }
+    </script>
+    
+</body>
+</html>
