@@ -3,182 +3,85 @@
 <head>
     <style>
         *{
-            padding: 0;
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-        }
-        header{
-            background-color: rgb(16, 63, 63);
-            color: white;
-            text-align: center;
-            text-transform: capitalize;
-            
-        }
-        .ul-li{
-           margin-top: 10px;
-            list-style-type: none;
-            display: inline-flex;
-            margin: 20px;
-          
-        }
-
-
-        a{
-            text-decoration: none;
-            list-style-type: none ;
+            margin: 0;
+            padding: 0;
             font-weight: bold;
-            color: azure;
-           
-        }
-        a:hover{
-           background-color: rgba(30, 117, 117, 0.445);
-        }
-
-
-        .caixa{ text-align: center;
-          height: 30px;
-          margin-top: 20px;
-          box-shadow: 2px 4px 5px black;
+            
          
-            
-        }
-        main{
-            text-align: center;
-            border: solid 2px rgba(45, 97, 108, 0.974);
-           background-color: rgb(36, 150, 93);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-           
-            
-        }
-        #img-2{
-           height: 500px;
-           border: solid 1px rgba(26, 112, 46, 0.399);
-           text-align: center;
-           background-size: cover;
-           background-repeat: no-repeat;
-           color: rgb(26, 67, 54);
-           font-weight: bold;
           
-
         }
-        .icon{ width: 30px;
-           margin-left: 250px;
-         
+        #caixa-texto{
+           border: 0;
+           border-radius: 5px;
+           background-color: rgb(195, 236, 236);
+           padding: 10px;
+        }
+        #caixa-senha{
+            border: 0;
+            border-radius: 5px;
+            background-color: rgb(195, 236, 236);
+            padding: 10px;
            
-            
-        
-            
         }
-        #icone-menu{
-            display: none;
+        nav{
+            background-color: rgb(61, 60, 60);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50% , -50%);
+          padding: 100px;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.335);
+          border-radius: 10px;
+          color: aliceblue;
+          border: solid 1px black;
+         
+          
+         
+          
         }
-        #itens{
+
+        input{
+            padding: 5px;
+        }
+        #botao-esqueci{
+            background-color: rgb(13, 104, 104);
+            border: 0;
+            padding: 10px;
+            border-radius: 10px;
             text-transform: uppercase;
-        }
-
-
-        @media screen and (max-width: 730px){
-            .ul-li{
-                display: block;
-            }
-            #itens{
-                display: none;
-                text-transform: uppercase;
-            }
-            #icone-menu{
-                width: 25px;
-                display: block;
-                cursor: pointer;
-                
-                
-            }
-          
-            }
-               th, td{
-                border: solid 1px black;
-               border-collapse: collapse;
-               text-align: center;
-               
-
-            }
-            .icon{
-                width: 30px;
-            margin-left: 100px;
            
-            }
-        
-    
-        
-
-        
-        
+        }
+        #botao-entrar{
+            background-color: rgb(13, 104, 104);
+            border: 0;
+            padding: 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+           
+        }
+        body{ 
+         
+           
+           
+        }
+      
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>tela login</title>
 </head>
 <body>
-    <header>
-        <menu>
-            <h1>bem vindos</h1>
-          <button>
-            <img src="menu.png" alt="menu" onclick="openMenu()"  id="icone-menu">
-          </button>
-         
-          
-            <ul id="itens">
-                <li class="ul-li"><a href="#">faq</a></li>
-                <li class="ul-li"><a href="#">sobre</a></li>
-                <li class="ul-li"><a href="#">contatto</a></li>
-            </ul>
-        </menu>
-    </header>
-    <main>
-        <p><input type="email" minlength="5" maxlength="10" required placeholder="Email..." class="caixa" id="box1"></p><br>
-        <p><input type="password" minlength=" 5" maxlength="10" placeholder="senha..." class="caixa" id="box2"></p> <br>
-        <p><input type="submit" value="entrar"></p>
-        
-    </main>
-    <div id="img-2">
-     <h1>ola</h1>
-    </div> 
+    <nav>
+        <h1>login</h1><br><br>
 
-    <footer>
-        <a href="#"><img src="facebook (1).png" alt="incone face" class="icon"></a>
+        <input type="text" placeholder="Nome:" required minlength="5" maxlength="10" id="caixa-texto"><br><br>
 
-        <a href="#"><img src="whatsapp (1).png" alt="incone whts" class="icon"></a>
+        <input type="password" placeholder="senha:" required minlength="5" maxlength="10" id="caixa-senha"><br><br>
 
-        <a href="#"><img src="instagram (1).png" alt="incone insta" class="icon"></a>
-    </footer>
-    <script>
-         function openMenu(){
-        var abrir = window.document.getElementById('itens')
-        var icon = window.document.getElementById('icone-menu')
-        var redes = window.document.getElementsByClassName('icon')
-      
-       if( abrir.style.display == 'block'){
-        abrir.style.display = 'none'
-        icon.src = 'menu.png'
-       
-        
-       }else{
-        abrir.style.display = 'block'
-        icon.src = 'menu-fechado.png.png'
-        
-       
-        
-       }
-      
-
-        }
-      
-      
-    </script>
-  
-    
-    
+        <input type="button" value="esqueci-senha" id="botao-esqueci"><br><br>
+        <input type="button" value="entrar" onclick="enviar()" id="botao-entrar">
+    </nav>
     
 </body>
 </html>
