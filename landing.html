@@ -24,7 +24,7 @@
             padding: 10px;
            
         }
-        nav{
+        form{
             background-color: rgb(61, 60, 60);
           position: absolute;
           left: 50%;
@@ -72,16 +72,39 @@
     <title>tela login</title>
 </head>
 <body>
-    <nav>
-        <h1>login</h1><br><br>
+  <form id="formulario">
+      
+            <h1>login</h1><br><br>
+            <input type="text" placeholder="Nome:" required minlength="5" maxlength="10" id="caixa-texto"><br><br>
+            <input type="password" placeholder="senha:" required minlength="5" maxlength="10" id="caixa-senha"><br><br>
+            <input type="button" value="esqueci-senha" id="botao-esqueci"><br><br>
+            <input type="button" value="entrar" onclick="enviarDados()" id="botao-entrar">
+      
+  </form>
+  <script>
+    function enviarDados(){
+var form = window.document.getElementById ('formulario')
+var caixa = window.document.getElementById('caixa-texto')
+var senha = window.document.getElementById('caixa-senha')
+var entrar = window.document.getElementById('botao-entrar')
+if (caixa.value <= 0){
+    window.alert('por favor prencha seu nome')
 
-        <input type="text" placeholder="Nome:" required minlength="5" maxlength="10" id="caixa-texto"><br><br>
-
-        <input type="password" placeholder="senha:" required minlength="5" maxlength="10" id="caixa-senha"><br><br>
-
-        <input type="button" value="esqueci-senha" id="botao-esqueci"><br><br>
-        <input type="button" value="entrar" onclick="enviar()" id="botao-entrar">
-    </nav>
+}else{
+    window.alert('seus dados foram enviados')
+}
+if(senha.value <= 0){
+    window.alert('por favor digite sua senha')
+}else{
+   
+}
+    
+    }
+    
+  </script>
     
 </body>
 </html>
+
+
+
