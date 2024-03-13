@@ -72,7 +72,7 @@
     <title>tela login</title>
 </head>
 <body>
-  <form id="formulario">
+  <form id="formulario" method="get" action="cad.php">
       
             <h1>login</h1><br><br>
             <input type="text" placeholder="Nome:" required minlength="5" maxlength="10" id="caixa-texto"><br><br>
@@ -81,32 +81,7 @@
             <input type="button" value="entrar" onclick="enviarDados()" id="botao-entrar">
       
   </form>
-  <script>
-    function enviarDados(){
-var form = window.document.getElementById ('formulario')
-var caixa = window.document.getElementById('caixa-texto')
-var senha = window.document.getElementById('caixa-senha')
-var entrar = window.document.getElementById('botao-entrar')
-if (caixa.value <= 0){
-    window.alert('por favor prencha seu nome')
-
-} else{
-   
-    
-}
-if(senha.value <= 0){
-    window.alert('por favor digite sua senha')
-}else{
-    window.alert ('seus dados foram enviados')
-  
-  
-}
-
-    
-    }
-    
-  </script>
-    
+ 
 </body>
 </html>
 
